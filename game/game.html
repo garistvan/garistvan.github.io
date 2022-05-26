@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+
+<body>
+    <div id="elem" style="height: 100px; width: 100px; border: solid 2px red;
+    position: relative; right: 50%; top: 900px ;"> </div>
+    <script>
+        let xpos = 0;
+  document.addEventListener('keydown', logKey);
+    function logKey(e) {
+      if (`${e.code}` == "ArrowRight") {
+        xpos -= 15;
+      }
+          if (`${e.code}` == "ArrowLeft") {
+            xpos += 15;
+      }
+      document.getElementById("elem").style.right = xpos + "px"; 
+    }
+    </script>
+</body>
+
+</html>
